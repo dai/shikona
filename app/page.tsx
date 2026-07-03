@@ -17,12 +17,19 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <section className="mx-auto flex min-h-screen w-full max-w-5xl flex-col justify-center px-6 py-12 sm:px-8">
-        <div className="max-w-3xl">
-          <p className="text-sm font-medium text-muted-foreground">Parent project: dai/o-sumo</p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-normal sm:text-6xl">Shikona Dictionary</h1>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Sumo wrestler shikona dictionaries for Google Japanese Input and Microsoft IME.
-          </p>
+        <div className="grid items-center gap-8 lg:grid-cols-[1fr_400px]">
+          <div className="max-w-3xl">
+            <p className="text-sm font-medium text-muted-foreground">Parent project: dai/o-sumo</p>
+            <h1 className="mt-4 text-4xl font-semibold tracking-normal sm:text-6xl">Shikona Dictionary</h1>
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
+              Sumo wrestler shikona dictionaries for Google Japanese Input and Microsoft IME.
+            </p>
+          </div>
+          <img
+            src="eyecatch.png"
+            alt="Shikona Dictionary eyecatch"
+            className="aspect-[4/3] w-full max-w-[400px] rounded-lg border object-cover shadow-sm"
+          />
         </div>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
