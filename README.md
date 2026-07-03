@@ -1,6 +1,8 @@
-# 四股名辞書
+# しこ名辞書
 
 大相撲の力士の四股名を変換しやすくするための日本語入力用辞書です。
+
+2026年7月3日時点、幕下以上の約190人のしこ名を収録してます。
 
 親プロジェクト: [dai/o-sumo](https://github.com/dai/o-sumo)
 
@@ -9,11 +11,11 @@
 ## 配布ファイル
 
 - `rikishi_20260703.txt`: Google 日本語入力にインポートするユーザー辞書テキストです。
-- `rikishi_20260703.dic`: Microsoft IME に追加するシステム辞書です。
+- `rikishi_20260703.dic`: Microsoft IME に追加するシステム辞書です（未サポート）。
 
 `txt` は「よみ」「単語」「品詞」をテキストとして取り込む形式です。
 
-`dic` は Microsoft IME のシステム辞書として追加する形式です。
+`dic` は Microsoft IME のシステム辞書として追加する形式です。作者自身、利用していないのでサポート外とさせていただきます。
 
 ## Mac の場合: Google 日本語入力
 
@@ -54,7 +56,7 @@ Windows PC で Google 日本語入力を使う場合も、`rikishi_20260703.txt`
 
 入力アイコンが見つからない場合は、Windows の入力方式が Google 日本語入力になっているか確認してください。
 
-## PC の場合: Microsoft IME
+### PC の場合: Microsoft IME（サポート外）
 
 Windows PC で Microsoft IME を使う場合は、`rikishi_20260703.dic` をシステム辞書として追加します。
 
@@ -86,3 +88,5 @@ pnpm build
 ```
 
 GitHub Pages へのデプロイは `.github/workflows/pages.yml` で行います。
+
+サポートは&#x1d54f;にて<a href="https://x.com/daisuke">@daisuke</a>が行います。 
