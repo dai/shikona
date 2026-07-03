@@ -16,3 +16,4 @@
 - `dai/shikona` was created and `v2026.07.03` release assets were uploaded.
 - The provided eyecatch image was added to the page, Open Graph metadata, and Twitter card metadata.
 - `GITHUB_ACTIONS=true pnpm build` passed for the GitHub Pages base path.
+- GitHub Pages workflow install was changed to `pnpm install --frozen-lockfile --ignore-scripts` after CI failed on pnpm build script approval.
