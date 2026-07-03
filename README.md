@@ -1,43 +1,83 @@
-# Shikona Dictionary
+# 四股名辞書
 
-Sumo wrestler shikona dictionaries for Google Japanese Input and Microsoft IME.
+大相撲の力士の四股名を変換しやすくするための日本語入力用辞書です。
 
-Parent project: [dai/o-sumo](https://github.com/dai/o-sumo)
+親プロジェクト: [dai/o-sumo](https://github.com/dai/o-sumo)
 
-Download the latest files from [Releases](https://github.com/dai/shikona/releases/latest).
+最新版は [Releases](https://github.com/dai/shikona/releases/latest) からダウンロードできます。
 
-## Files
+## 配布ファイル
 
-- `rikishi_20260703.txt`: Google Japanese Input user dictionary text.
-- `rikishi_20260703.dic`: Microsoft IME system dictionary.
+- `rikishi_20260703.txt`: Google 日本語入力にインポートするユーザー辞書テキストです。
+- `rikishi_20260703.dic`: Microsoft IME に追加するシステム辞書です。
 
-## Google Japanese Input import
+`txt` は「よみ」「単語」「品詞」をテキストとして取り込む形式です。
 
-1. Download `rikishi_20260703.txt` from the latest release.
-2. Open Google Japanese Input properties.
-3. Open `Dictionary`, then `User dictionary`.
-4. Select the dictionary where you want to import the shikona entries.
-5. Open `Tools`, then choose `Import from selected dictionary`.
-6. Select `rikishi_20260703.txt`.
-7. Keep the file format as Google Japanese Input text format.
-8. Run the import and confirm that the shikona entries were added.
+`dic` は Microsoft IME のシステム辞書として追加する形式です。
 
-The text file uses three tab-separated columns: word, reading, and type.
+## Mac の場合: Google 日本語入力
 
-## Microsoft IME import
+Mac では `rikishi_20260703.txt` を Google 日本語入力の辞書ツールからインポートします。Microsoft IME 用の `dic` は使いません。
 
-1. Download `rikishi_20260703.dic` from the latest release.
-2. Open Windows Settings.
-3. Go to `Time & language`, then `Language & region`.
-4. Open Japanese language options.
-5. Open Microsoft IME keyboard options.
-6. Open `Dictionary and learning`, then `System dictionaries`.
-7. Add `rikishi_20260703.dic`.
-8. Enable the added dictionary and confirm that shikona conversion works.
+1. [最新リリース](https://github.com/dai/shikona/releases/latest) から `rikishi_20260703.txt` をダウンロードします。
+2. macOS のメニューバー右上にある入力メニューを開きます。
+3. 入力ソースを `Google 日本語入力` に切り替えます。
+4. 同じ入力メニューから `辞書ツール` または `辞書ツール...` を開きます。
+5. 既存の辞書に追加したい場合は、左側の辞書一覧で追加先の辞書を選びます。
+6. 新しい辞書として分けたい場合は、辞書ツール内で新規辞書を作成してから選びます。
+7. `管理` メニューを開きます。
+8. 既存辞書へ追加する場合は `選択した辞書にインポート` を選びます。
+9. 新規辞書として取り込む場合は `新規辞書にインポート` を選びます。
+10. ダウンロードした `rikishi_20260703.txt` を選択します。
+11. フォーマットは Google 日本語入力の辞書形式のままにします。
+12. インポートを実行します。
+13. メモや検索欄などで、例として `ほうしょうりゅう` と入力し、`豊昇龍` が候補に出ることを確認します。
 
-The `.dic` file is distributed as a Microsoft IME dictionary file. If your Windows UI labels differ, search Windows Settings for `Microsoft IME` and open the system dictionary settings from there.
+うまく出ない場合は、入力ソースが Google 日本語入力になっているか、インポート先の辞書が有効かを確認してください。
 
-## Development
+## PC の場合: Google 日本語入力
+
+Windows PC で Google 日本語入力を使う場合も、`rikishi_20260703.txt` をインポートします。Microsoft IME を使う場合は次の「PC の場合: Microsoft IME」を使ってください。
+
+1. [最新リリース](https://github.com/dai/shikona/releases/latest) から `rikishi_20260703.txt` をダウンロードします。
+2. タスクバー右下の入力アイコン、または Google 日本語入力のアイコンを右クリックします。
+3. `辞書ツール` を開きます。
+4. 既存の辞書に追加したい場合は、左側の辞書一覧で追加先の辞書を選びます。
+5. 新しい辞書として分けたい場合は、辞書ツール内で新規辞書を作成してから選びます。
+6. `管理` メニューを開きます。
+7. 既存辞書へ追加する場合は `選択した辞書にインポート` を選びます。
+8. 新規辞書として取り込む場合は `新規辞書にインポート` を選びます。
+9. ダウンロードした `rikishi_20260703.txt` を選択します。
+10. フォーマットは Google 日本語入力の辞書形式のままにします。
+11. インポートを実行します。
+12. メモ帳などで、例として `おおのさと` と入力し、`大の里` が候補に出ることを確認します。
+
+入力アイコンが見つからない場合は、Windows の入力方式が Google 日本語入力になっているか確認してください。
+
+## PC の場合: Microsoft IME
+
+Windows PC で Microsoft IME を使う場合は、`rikishi_20260703.dic` をシステム辞書として追加します。
+
+1. [最新リリース](https://github.com/dai/shikona/releases/latest) から `rikishi_20260703.dic` をダウンロードします。
+2. タスクバー右下の `A` または `あ` の入力アイコンを右クリックします。
+3. `設定` を開きます。
+4. `Microsoft IME` の設定画面で `学習と辞書` を開きます。
+5. `システム ディクショナリ` または `システム辞書` の項目を探します。
+6. `追加` を選びます。
+7. ダウンロードした `rikishi_20260703.dic` を選択します。
+8. 追加した辞書が一覧に表示されたら、有効化のスイッチまたはチェックをオンにします。
+9. 設定画面を閉じます。
+10. メモ帳などで、例として `きりしま` と入力し、`霧島` が候補に出ることを確認します。
+
+Windows のバージョンによって表示名が少し違うことがあります。`学習と辞書` に `システム辞書` の追加項目が見つからない場合は、Windows の設定で `Microsoft IME` を検索して、IME の詳細設定または辞書設定を開いてください。
+
+## どちらを使えばよいか
+
+- Mac: `rikishi_20260703.txt` を Google 日本語入力にインポートします。
+- Windows PC + Google 日本語入力: `rikishi_20260703.txt` を Google 日本語入力にインポートします。
+- Windows PC + Microsoft IME: `rikishi_20260703.dic` を Microsoft IME のシステム辞書として追加します。
+
+## 開発
 
 ```bash
 pnpm install
@@ -45,4 +85,4 @@ pnpm dev
 pnpm build
 ```
 
-GitHub Pages deployment is handled by `.github/workflows/pages.yml`.
+GitHub Pages へのデプロイは `.github/workflows/pages.yml` で行います。
