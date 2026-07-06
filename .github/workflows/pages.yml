@@ -48,10 +48,21 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deploy_retry.outputs.page_url || steps.deploy.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Deploy
-        id: deployment
+        id: deploy
         uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Retry deploy
+        if: steps.deploy.outcome == 'failure'
+        id: deploy_retry
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Fail when deploy retry does not recover
+        if: always() && steps.deploy.outcome == 'failure' && steps.deploy_retry.outcome == 'failure'
+        run: exit 1
