@@ -64,5 +64,5 @@ jobs:
         continue-on-error: true
 
       - name: Fail when deploy retry does not recover
-        if: steps.deploy.outcome == 'failure' && steps.deploy_retry.outcome == 'failure'
+        if: steps.deploy_retry.outcome == 'failure'
         run: exit 1
